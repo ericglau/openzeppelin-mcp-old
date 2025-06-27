@@ -5,7 +5,7 @@
       "dependencies": {
         "@ericglau/wizard-mcp": "0.0.1-alpha.7",
         "@modelcontextprotocol/sdk": "^1.12.3",
-        "@openzeppelin/wizard": "^0.5.6",
+        "@openzeppelin/wizard": "^0.6.0",
         "@vercel/mcp-adapter": "^0.11.1",
         "next": "^15.3.3",
         "react": "^19.1.0",
@@ -89,7 +89,7 @@
 
     "@next/swc-win32-x64-msvc": ["@next/swc-win32-x64-msvc@15.3.4", "", { "os": "win32", "cpu": "x64" }, "sha512-4kDt31Bc9DGyYs41FTL1/kNpDeHyha2TC0j5sRRoKCyrhNcfZ/nRQkAUlF27mETwm8QyHqIjHJitfcza2Iykfg=="],
 
-    "@openzeppelin/wizard": ["@openzeppelin/wizard@0.5.6", "", {}, "sha512-9/riYAKa3ZvohYjUwE73KTX8cPYu//0orPQzLUekXV+fLr0PbLnXGvDGyZtFO0gXoInVM4aXS8a3TDvNwZYQLw=="],
+    "@openzeppelin/wizard": ["@openzeppelin/wizard@0.6.0", "", {}, "sha512-IGBvvUW0DQs+8uaArERmUqAJYUNPE8CJw08cuXt+v9NSJfqR+R2ik1vAjyKlT7mTYhofOMZolqlm9vIYfxiDbQ=="],
 
     "@openzeppelin/wizard-stellar": ["@openzeppelin/wizard-stellar@0.2.2", "", {}, "sha512-BZdP91pZWz7pmQk4avT5XUfrrloNaNgSM2Xrylh9qvDqV9MX4+eXWiDzqVqD88JDbPYlx22czpN88Y73DoFHxw=="],
 
@@ -352,6 +352,8 @@
     "zod": ["zod@3.25.67", "", {}, "sha512-idA2YXwpCdqUSKRCACDE6ItZD9TZzy3OZMtpfLoh6oPR47lipysRrJfjzMqFxQ3uJuUPyUeWe1r9vLH33xO/Qw=="],
 
     "zod-to-json-schema": ["zod-to-json-schema@3.24.6", "", { "peerDependencies": { "zod": "^3.24.1" } }, "sha512-h/z3PKvcTcTetyjl1fkj79MHNEjm+HpD6NXheWjzOekY7kV+lwDYnHw+ivHkijnCSMz1yJaWBD9vu/Fcmk+vEg=="],
+
+    "@ericglau/wizard-mcp/@openzeppelin/wizard": ["@openzeppelin/wizard@0.5.6", "", {}, "sha512-9/riYAKa3ZvohYjUwE73KTX8cPYu//0orPQzLUekXV+fLr0PbLnXGvDGyZtFO0gXoInVM4aXS8a3TDvNwZYQLw=="],
 
     "http-errors/statuses": ["statuses@2.0.1", "", {}, "sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ=="],
   }
