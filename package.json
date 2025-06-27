@@ -7,7 +7,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.13.0",
+    "@modelcontextprotocol/sdk": "^1.12.3",
     "@openzeppelin/wizard": "^0.5.6",
     "@vercel/mcp-adapter": "^0.11.1",
     "next": "^15.3.3",
@@ -15,6 +15,7 @@
     "react-dom": "^19.1.0",
     "@ericglau/wizard-mcp": "0.0.1-alpha.7"
   },
+  "packageManager": "yarn@4.6.0+sha224.acd0786f07ffc6c933940eb65fc1d627131ddf5455bddcc295dc90fd",
   "devDependencies": {
     "@types/node": "24.0.3",
     "@types/react": "19.1.8",
