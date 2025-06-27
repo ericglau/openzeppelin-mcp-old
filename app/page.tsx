@@ -113,21 +113,23 @@ function ConfigModal({ isOpen, onClose, mcp }) {
                 lineHeight: "1.5",
               }}
             ></p>
-            <div className="code-window">
-              <div className="code-header">
-                <div className="code-dots">
-                  <span></span>
-                  <span></span>
-                  <span></span>
+            <div className="config-tabs">
+              <div className="code-window">
+                <div className="code-header">
+                  <div className="code-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div className="code-filename">Terminal</div>
                 </div>
-                <div className="code-filename">Terminal</div>
+                <pre className="code-content">
+                  <code>
+                    claude mcp add -t http openzeppelin-
+                    {mcp.name.toLowerCase().replace(" ", "-")} {mcp.url}
+                  </code>
+                </pre>
               </div>
-              <pre className="code-content">
-                <code>
-                  claude mcp add -t http openzeppelin-
-                  {mcp.name.toLowerCase().replace(" ", "-")} {mcp.url}
-                </code>
-              </pre>
             </div>
           </div>
         </div>
@@ -284,9 +286,9 @@ export default function HomePage() {
 
       <div className="minimal-container">
         <div className="minimal-content">
-          <h1 className="minimal-title">OpenZeppelin MCP Server</h1>
+          <h1 className="minimal-title">OpenZeppelin MCP Servers</h1>
           <p className="minimal-subtitle">
-            Model Context Protocol infrastructure for OpenZeppelin products
+            Model Context Protocol Servers Repository for OpenZeppelin products
           </p>
 
           <div className="features-section">
