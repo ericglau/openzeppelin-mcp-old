@@ -1,10 +1,10 @@
 import { createMcpHandler } from "@vercel/mcp-adapter";
-import { registerSolidityTools } from "@ericglau/wizard-mcp/src/solidity/tools";
+import { registerCairoTools } from "@ericglau/wizard-mcp/src/cairo/tools";
 import wizardMcpPackage from "@ericglau/wizard-mcp/package.json";
 
 const serverOptions = {
   serverInfo: {
-    name: "OpenZeppelin Solidity Wizard MCP Server",
+    name: "OpenZeppelin Cairo Wizard MCP Server",
     version: wizardMcpPackage.version,
   },
   capabilities: {
@@ -12,22 +12,22 @@ const serverOptions = {
       listChanged: true,
     },
     instructions: `
-A tool for generating secure Solidity smart contracts using OpenZeppelin's standardized templates.
-It can generate and return to the client in plain text the code of ERC20/ERC721/ERC1155 tokens, governance contracts, stablecoin tokens, RWA tokens and custom contracts with configurable features.
+A tool for generating secure Cairo smart contracts using OpenZeppelin's standardized templates.
+It can generate and return to the client in plain text the code of ERC20/ERC721/ERC1155 tokens, account contracts, multisig contracts,  governance contracts, vesting tokens and custom contracts with configurable features.
 Outputs production-ready code following security best practices.
 `,
   },
 };
 
 const serverConfig = {
-  basePath: "/wizard/solidity",
+  basePath: "/wizard/cairo",
   verboseLogs: true,
   maxDuration: 60,
 };
 
 const handler = createMcpHandler(
   async (server) => {
-    registerSolidityTools(server);
+    registerCairoTools(server);
   },
   serverOptions,
   serverConfig
