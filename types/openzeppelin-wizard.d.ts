@@ -11,6 +11,12 @@ declare module '@openzeppelin/wizard' {
     upgradeable?: any;
     info?: any;
   }
+
+  export interface RoyaltyInfoOptions {
+    enabled?: boolean;
+    defaultRoyaltyFraction?: string;
+    feeDenominator?: string;
+  }
   
   // Re-export existing types
   export * from '@openzeppelin/wizard/dist/index';
