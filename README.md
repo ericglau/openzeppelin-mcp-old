@@ -35,4 +35,28 @@ bun run dev
 // TODO Add production bundle commands
 ### Bundle and run server
 
+1. Build production bundle:
+
+```bash
+bun run build
+```
+
+2. Start production server:
+
+```bash
+bun run start
+```
+
 ### Docker
+
+1. Build image:
+
+```bash
+docker build -t openzeppelin-mcp .
+```
+
+2. Run container:
+
+```bash
+docker run -it -p 3000:3000 openzeppelin-mcp
+```
