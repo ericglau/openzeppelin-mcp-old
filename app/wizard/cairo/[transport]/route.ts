@@ -1,6 +1,6 @@
 import { createMcpHandler } from "@vercel/mcp-adapter";
-import { registerCairoTools } from "@ericglau/wizard-mcp/src/cairo/tools";
-import wizardMcpPackage from "@ericglau/wizard-mcp/package.json";
+import { registerCairoTools } from "@openzeppelin/wizard-mcp/src/cairo/tools";
+import wizardMcpPackage from "@openzeppelin/wizard-mcp/package.json";
 
 const serverOptions = {
   serverInfo: {

@@ -1,6 +1,6 @@
 import { createMcpHandler } from "@vercel/mcp-adapter";
-import { registerSolidityTools } from "@ericglau/wizard-mcp/src/solidity/tools";
-import wizardMcpPackage from "@ericglau/wizard-mcp/package.json";
+import { registerSolidityTools } from "@openzeppelin/wizard-mcp/src/solidity/tools";
+import wizardMcpPackage from "@openzeppelin/wizard-mcp/package.json";
 
 const serverOptions = {
   serverInfo: {

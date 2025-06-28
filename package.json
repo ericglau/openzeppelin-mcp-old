@@ -13,11 +13,12 @@
     "next": "^15.3.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "@ericglau/wizard-mcp": "0.0.1-alpha.7"
+    "@openzeppelin/wizard-mcp": "0.0.1"
   },
   "devDependencies": {
     "@types/node": "24.0.3",
     "@types/react": "19.1.8",
     "typescript": "5.8.3"
-  }
+  },
+  "packageManager": "yarn@4.6.0+sha224.acd0786f07ffc6c933940eb65fc1d627131ddf5455bddcc295dc90fd"
 }

@@ -1,6 +1,6 @@
 import { createMcpHandler } from "@vercel/mcp-adapter";
-import { registerStellarTools } from "@ericglau/wizard-mcp/src/stellar/tools";
-import wizardMcpPackage from "@ericglau/wizard-mcp/package.json";
+import { registerStellarTools } from "@openzeppelin/wizard-mcp/src/stellar/tools";
+import wizardMcpPackage from "@openzeppelin/wizard-mcp/package.json";
 
 const serverOptions = {
   serverInfo: {

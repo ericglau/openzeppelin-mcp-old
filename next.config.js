@@ -2,6 +2,7 @@
 const nextConfig = {
   transpilePackages: [
     '@ericglau/wizard-mcp',
+    '@openzeppelin/wizard-mcp',
     '@modelcontextprotocol/sdk'
   ],
   experimental: {

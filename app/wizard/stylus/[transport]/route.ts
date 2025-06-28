@@ -1,6 +1,6 @@
 import { createMcpHandler } from "@vercel/mcp-adapter";
-import { registerStylusTools } from "@ericglau/wizard-mcp/src/stylus/tools";
-import wizardMcpPackage from "@ericglau/wizard-mcp/package.json";
+import { registerStylusTools } from "@openzeppelin/wizard-mcp/src/stylus/tools";
+import wizardMcpPackage from "@openzeppelin/wizard-mcp/package.json";
 
 const serverOptions = {
   serverInfo: {
