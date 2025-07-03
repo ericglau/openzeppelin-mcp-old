@@ -40,6 +40,6 @@ runs:
         aws-session-token: ${{ env.AWS_SESSION_TOKEN }}
         aws-region: us-east-1
         role-chaining: true
-        role-to-assume: "arn:aws:iam::997179694723:role/github-actions-research-account-oidc-role"
+        role-to-assume: "arn:aws:iam::301065321042:role/GithubOIDCResearchAccountRole"
         role-session-name: "oz-mcp"
         role-duration-seconds: 900
