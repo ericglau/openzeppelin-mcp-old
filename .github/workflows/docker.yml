@@ -20,7 +20,7 @@ jobs:
       packages: write
       attestations: write
     env:
-      REGISTRY: ghcr.io
+     REGISTRY: 301065321042.dkr.ecr.us-east-1.amazonaws.com
     steps:
       - name: Harden the runner (Audit all outbound calls)
         uses: step-security/harden-runner@4d991eb9b905ef189e4c376166672c3f2f230481 # v2.11.0
@@ -38,12 +38,18 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@b5ca514318bd6ebac0fb2aedd5d36ec1b5c232a2
 
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@9780b0c442fbb1117ed29e0efdff1e18412f7567 # v3.3.0
-        with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Login to GitHub Container Registry
+      #   uses: docker/login-action@9780b0c442fbb1117ed29e0efdff1e18412f7567 # v3.3.0
+      #   with:
+      #     registry: ${{ env.REGISTRY }}
+      #     username: ${{ github.repository_owner }}
+      #     password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up AWS credentials via OIDC and role chaining
+        uses: ./.github/actions/oidc
+
+      - name: Login to Amazon ECR
+        uses: aws-actions/amazon-ecr-login@v2
 
       - name: Prepare repository name
         id: repo_name
@@ -61,16 +67,6 @@ jobs:
           push: true
           tags: |
             ${{ env.REGISTRY }}/${{ steps.repo_name.outputs.lowercase }}:latest
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-      
-      - name: Attest
-        uses: actions/attest-build-provenance@c074443f1aee8d4aeeae555aebba3282517141b2 #v2.2.3
-        id: attest
-        with:
-          subject-name: ${{ env.REGISTRY }}/${{ steps.repo_name.outputs.lowercase }}
-          subject-digest: ${{ steps.push.outputs.digest }}
-          push-to-registry: true
 
   deploy:
     runs-on: ubuntu-latest
