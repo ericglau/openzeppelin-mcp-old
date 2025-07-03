@@ -5,8 +5,6 @@ name: Build and Push Docker Images
 on:
   release:
     types: [published]
-  push:
-    branches: [release-process]
 
 permissions:
   contents: read
@@ -52,6 +50,7 @@ jobs:
           push: true
           tags: |
             ${{ env.REGISTRY }}/openzeppelin-mcp:latest
+            ${{ env.REGISTRY }}/openzeppelin-mcp:${{ github.event.release.tag_name }}
 
   deploy:
     runs-on: ubuntu-latest
