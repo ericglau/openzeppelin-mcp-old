@@ -1,25 +1,6 @@
 ---
 name: AWS OIDC Credentials via Role Assume Chaining
 description: Retrieve AWS credentials by chaining role assumes
-inputs:
-  role-for-oidc:
-    description: The role that should be used for GitHub OIDC authentication
-    required: true
-  role-to-assume:
-    description: The role that should be finally assumed
-    required: true
-  role-session-name:
-    description: The session name that should be used when assuming roles
-    required: true
-    default: github-actions
-  role-duration-seconds:
-    description: duration of the credentials validity
-    required: true
-    default: 3600
-  aws-region:
-    description: The AWS region
-    required: false
-    default: us-east-1
 
 runs:
   using: composite
