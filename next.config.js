@@ -1,9 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   transpilePackages: [
-    "@openzeppelin/wizard-mcp",
-    "@modelcontextprotocol/sdk",
-  ],
+    "@openzeppelin/wizard-mcp"],
   experimental: {
     esmExternals: true,
   },

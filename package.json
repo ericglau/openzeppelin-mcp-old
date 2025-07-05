@@ -8,7 +8,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.12.3",
     "@vercel/mcp-adapter": "^0.11.1",
     "next": "^15.3.3",
     "react": "^19.1.0",
@@ -24,6 +23,5 @@
     "ts-jest": "^29.4.0",
     "ts-node": "^10.9.2",
     "typescript": "5.8.3"
-  },
-  "packageManager": "yarn@4.6.0+sha224.acd0786f07ffc6c933940eb65fc1d627131ddf5455bddcc295dc90fd"
+  }
 }
