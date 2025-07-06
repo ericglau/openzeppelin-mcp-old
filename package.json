@@ -4,7 +4,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.3",
@@ -16,8 +17,13 @@
     "@openzeppelin/wizard-mcp": "0.0.1"
   },
   "devDependencies": {
+    "@types/jest": "^30.0.0",
     "@types/node": "24.0.3",
     "@types/react": "19.1.8",
+    "jest": "^30.0.4",
+    "next-test-api-route-handler": "^4.0.16",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2",
     "typescript": "5.8.3"
   },
   "packageManager": "yarn@4.6.0+sha224.acd0786f07ffc6c933940eb65fc1d627131ddf5455bddcc295dc90fd"
