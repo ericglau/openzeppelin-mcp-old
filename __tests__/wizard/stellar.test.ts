@@ -10,7 +10,7 @@ import {
 const STELLAR_TOOLS_NAMES = [
   "stellar-fungible",
   "stellar-non-fungible",
-  //"stellar-stablecoin",
+  "stellar-stablecoin",
 ];
 
 it("GET Method not allowed", async () => {
