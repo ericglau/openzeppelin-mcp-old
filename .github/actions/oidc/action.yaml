@@ -1,0 +1,26 @@
+---
+name: AWS OIDC Credentials via Role Assume Chaining
+description: Retrieve AWS credentials by chaining role assumes
+
+runs:
+  using: composite
+  steps:
+    - name: assume oidc role
+      uses: aws-actions/configure-aws-credentials@ececac1a45f3b08a01d2dd070d28d111c5fe6722  # v4.1.0
+      with:
+        aws-region: us-east-1
+        role-to-assume: "arn:aws:iam::997179694723:role/github-actions-research-account-oidc-role"
+        role-session-name: "oz-mcp"
+        role-duration-seconds: 900
+    - name: assume target role
+      uses: aws-actions/configure-aws-credentials@ececac1a45f3b08a01d2dd070d28d111c5fe6722  # v4.1.0
+      id: assume-target-role
+      with:
+        aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY }}
+        aws-session-token: ${{ env.AWS_SESSION_TOKEN }}
+        aws-region: us-east-1
+        role-chaining: true
+        role-to-assume: "arn:aws:iam::301065321042:role/GithubOIDCResearchAccountRole"
+        role-session-name: "oz-mcp"
+        role-duration-seconds: 900
