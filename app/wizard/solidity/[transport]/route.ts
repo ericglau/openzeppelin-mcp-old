@@ -1,21 +1,21 @@
 import { createMcpHandler } from "@vercel/mcp-adapter";
 import { registerSolidityTools } from "@openzeppelin/wizard-mcp/src/solidity/tools";
+import { getTitleText } from "@/wizard/prompts";
+import { getInstructionsText } from "@/wizard/prompts";
 import wizardMcpPackage from "@openzeppelin/wizard-mcp/package.json";
+
+const LANGUAGE = "Solidity";
 
 const serverOptions = {
   serverInfo: {
-    name: "OpenZeppelin Solidity Wizard MCP Server",
+    name: getTitleText(LANGUAGE),
     version: wizardMcpPackage.version,
   },
   capabilities: {
     tools: {
       listChanged: true,
     },
-    instructions: `
-A tool for generating secure Solidity smart contracts using OpenZeppelin's standardized templates.
-It can generate and return to the client in plain text the code of ERC20/ERC721/ERC1155 tokens, governance contracts, stablecoin tokens, RWA tokens and custom contracts with configurable features.
-Outputs production-ready code following security best practices.
-`,
+    instructions: getInstructionsText(LANGUAGE),
   },
 };
 
