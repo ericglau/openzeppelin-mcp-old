@@ -14,7 +14,7 @@ function ConfigModal({ isOpen, onClose, mcp }) {
       filename: "claude_desktop_config.json",
       code: `{
   "mcpServers": {
-    "openzeppelinMcp": {
+    "openZeppelin${mcp.name.replace(/ /g, "")}": {
       "command": "npx",
       "args": ["mcp-remote", "${mcp.url}"]
     }
@@ -25,7 +25,7 @@ function ConfigModal({ isOpen, onClose, mcp }) {
       filename: "cursor_config.json",
       code: `{
   "mcpServers": {
-    "openzeppelinMcp": {
+    "openZeppelin${mcp.name.replace(/ /g, "")}": {
       "command": "npx",
       "args": ["mcp-remote", "${mcp.url}"]
     }
@@ -36,7 +36,7 @@ function ConfigModal({ isOpen, onClose, mcp }) {
       filename: "windsurf_config.json",
       code: `{
   "mcpServers": {
-    "openzeppelinMcp": {
+    "openZeppelin${mcp.name.replace(/ /g, "")}": {
       "command": "npx",
       "args": ["mcp-remote", "${mcp.url}"]
     }
@@ -228,7 +228,10 @@ export default function HomePage() {
     setSelectedMcp(null);
   };
 
-  const BASE_URL = "https://mcp.openzeppelin.com/";
+  const BASE_URL =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3000/"
+      : "https://mcp.openzeppelin.com/";
 
   const AVAILABLE_MCPS = [
     {
