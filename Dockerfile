@@ -11,7 +11,6 @@ RUN bun install
 COPY next-env.d.ts next.config.js tsconfig.json ./
 COPY app/ ./app/
 COPY public/ ./public/
-COPY types/ ./types/
 RUN bun run build
 
 # Runtime stage

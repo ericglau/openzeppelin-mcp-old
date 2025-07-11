@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
-    "noImplicitAny": false,
-    "suppressImplicitAnyIndexErrors": true,
     "noEmit": true,
     "incremental": true,
     "module": "esnext",
@@ -17,7 +19,9 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./app/*"]
+      "@/*": [
+        "./app/*"
+      ]
     },
     "plugins": [
       {
@@ -25,6 +29,13 @@
       }
     ]
   },
-  "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts", ".next/types/**/*.ts", "types/**/*.d.ts"],
-  "exclude": ["node_modules", "node_modules/@ericglau/wizard-mcp/**/*"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

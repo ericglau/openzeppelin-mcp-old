@@ -3,9 +3,7 @@
   "workspaces": {
     "": {
       "dependencies": {
-        "@modelcontextprotocol/sdk": "^1.12.3",
-        "@openzeppelin/wizard": "^0.6.0",
-        "@openzeppelin/wizard-mcp": "0.0.1",
+        "@openzeppelin/wizard-mcp": "^0.0.3",
         "@vercel/mcp-adapter": "^0.11.1",
         "next": "^15.3.3",
         "react": "^19.1.0",
@@ -226,11 +224,11 @@
 
     "@openzeppelin/wizard-cairo": ["@openzeppelin/wizard-cairo@2.0.0", "", {}, "sha512-rPfJp9Wbex5x9f+P7uJI3kBFqG2SexGt7csLGExnRNWMu8T9t0sFDHVQzaaskrJErqoWYMcGkIsiNHqXDUIzWQ=="],
 
-    "@openzeppelin/wizard-common": ["@openzeppelin/wizard-common@0.0.1", "", {}, "sha512-hzWcbA5PjGd7FVjKRsJBo5QX3sg/mOr6+WWiwmcixNdXcsWXRnOY2Y4OuHLUpfybo8siPvteu6LHDpJGB+rUqA=="],
+    "@openzeppelin/wizard-common": ["@openzeppelin/wizard-common@0.0.2", "", {}, "sha512-JFEzCdORjaTRN0aEgAJavz59F+Z0GyIr+yHDvmqByiaSN8OUJwNw/OUNrIWM27gfgovVXpgw1AH883VxtWifkg=="],
 
-    "@openzeppelin/wizard-mcp": ["@openzeppelin/wizard-mcp@0.0.1", "", { "dependencies": { "@modelcontextprotocol/sdk": "^1.11.1", "@openzeppelin/wizard": "^0.6.0", "@openzeppelin/wizard-cairo": "^2.0.0", "@openzeppelin/wizard-common": "^0.0.1", "@openzeppelin/wizard-stellar": "^0.2.2", "@openzeppelin/wizard-stylus": "^0.2.0-alpha.5" }, "bin": { "wizard-mcp": "dist/index.js" } }, "sha512-3TYcvKlZNKfEivmr9j7Zc/KHXC1DDcg/2F75YHJKYeYMTqs9igzczek0pVVRVak3xAG8FENHV7uvMITGXSl6Ng=="],
+    "@openzeppelin/wizard-mcp": ["@openzeppelin/wizard-mcp@0.0.3", "", { "dependencies": { "@modelcontextprotocol/sdk": "^1.11.1", "@openzeppelin/wizard": "^0.6.0", "@openzeppelin/wizard-cairo": "^2.0.0", "@openzeppelin/wizard-common": "^0.0.2", "@openzeppelin/wizard-stellar": "^0.3.0", "@openzeppelin/wizard-stylus": "^0.2.0-alpha.5" }, "bin": { "wizard-mcp": "dist/index.js" } }, "sha512-y3Xp1iyNWxvCVzci4n8XPrbS1sMhLBPxMSkVwlDL047HF3rH24vWqQAbwW7JTkpWL694fee1aGWyD2r0435wBg=="],
 
-    "@openzeppelin/wizard-stellar": ["@openzeppelin/wizard-stellar@0.2.3", "", {}, "sha512-reKcD29L32en3BZ5MT5dC+nloOEp8k79iN+qbbUZ5ItUbAEy/ONDVx+Lbkq8cj/F7pY8q97dHNrgHXo18/+GmQ=="],
+    "@openzeppelin/wizard-stellar": ["@openzeppelin/wizard-stellar@0.3.0", "", {}, "sha512-zoNej6kiE68HuyrmgyvlE7/EN2ZDgeKWia4SDbCmwSOl5YJSkmSsyJzYUhJZXxJzygAd1SuxpaconZ+ikvSHKw=="],
 
     "@openzeppelin/wizard-stylus": ["@openzeppelin/wizard-stylus@0.2.0-alpha.5", "", {}, "sha512-oAaOmp0eYRCLdm646uzh1M9bVnHBgftErjGVt3jCWA7H9s/5XSVS2MdBFE/uVhp4XObC6pe3BeEdX/L5RdmFGQ=="],
 
@@ -858,7 +856,7 @@
 
     "stack-utils": ["stack-utils@2.0.6", "", { "dependencies": { "escape-string-regexp": "^2.0.0" } }, "sha512-XlkWvfIm6RmsWtNJx+uqtKLS8eqFbxUg0ZzLXqY0caEy9l7hruX8IpiDnjsLavoBgqCCR71TqWO8MaXYheJ3RQ=="],
 
-    "statuses": ["statuses@2.0.2", "", {}, "sha512-DvEy55V3DB7uknRo+4iOGT5fP1slR8wQohVdknigZPMpMstaKJQWhwiYBACJE3Ul2pTnATihhBYnRhZQHGBiRw=="],
+    "statuses": ["statuses@2.0.1", "", {}, "sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ=="],
 
     "streamsearch": ["streamsearch@1.1.0", "", {}, "sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg=="],
 
@@ -1003,8 +1001,6 @@
     "filelist/minimatch": ["minimatch@5.1.6", "", { "dependencies": { "brace-expansion": "^2.0.1" } }, "sha512-lKwV/1brpG6mBUFHtb7NUmtABCb2WZZmm2wNiOA5hAb8VdCS4B3dtMWyvcoViccwAW/COERjXLt0zP1zXUN26g=="],
 
     "glob/minimatch": ["minimatch@9.0.5", "", { "dependencies": { "brace-expansion": "^2.0.1" } }, "sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow=="],
-
-    "http-errors/statuses": ["statuses@2.0.1", "", {}, "sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ=="],
 
     "istanbul-lib-source-maps/@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.29", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-uw6guiW/gcAGPDhLmd77/6lW8QLeiV5RUTsAX46Db6oLhGaVj4lhnPwb184s1bkc8kdVg/+h988dro8GRDpmYQ=="],
 
