@@ -4,7 +4,7 @@ Model Context Protocol Servers Repository for OpenZeppelin products.
 
 ## Usage
 
-This repository contains the code for Model Context Protocol Servers Repository for OpenZeppelin products. For configuration instructions visit [mcp.openzeppelin.com](https://mcp.openzeppelin.com).
+This repository contains the code for Model Context Protocol servers repository for OpenZeppelin products. For configuration instructions visit [mcp.openzeppelin.com](https://mcp.openzeppelin.com).
 
 ## Local Development
 
