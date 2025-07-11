@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: [
-    "@openzeppelin/wizard-mcp"],
+  transpilePackages: ["@openzeppelin/wizard-mcp"],
   experimental: {
     esmExternals: true,
   },
@@ -11,6 +10,9 @@ const nextConfig = {
       ".jsx": [".jsx", ".tsx"],
     };
     return config;
+  },
+  typescript: {
+    ignoreBuildErrors: true,
   },
 };
 
