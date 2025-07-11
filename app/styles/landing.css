@@ -31,7 +31,6 @@ body {
 }
 
 .header-content {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 12px 24px;
   display: flex;
@@ -147,7 +146,6 @@ body {
   width: 100%;
 }
 
-
 .theme-toggle {
   display: flex;
   align-items: center;
@@ -196,7 +194,6 @@ body {
   width: 100%;
 }
 
-
 .feature-item {
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
@@ -208,13 +205,6 @@ body {
   color: var(--text-secondary);
   transition: all 0.3s ease;
 }
-
-.feature-item strong {
-  color: var(--text-primary);
-  font-weight: 600;
-}
-
-
 
 .code-title {
   font-size: 1.5rem;
@@ -298,63 +288,6 @@ body {
   transition: color 0.3s ease;
 }
 
-.config-tabs {
-  max-width: 850px;
-  margin: 0 auto;
-}
-
-.config-tabs .code-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.tab-buttons {
-  display: flex;
-  gap: 4px;
-  background: rgba(13, 17, 23, 0.5);
-  border-radius: 6px;
-  padding: 2px;
-  transition: background-color 0.3s ease;
-}
-
-[data-theme="light"] .tab-buttons {
-  background: rgba(246, 248, 250, 0.8);
-}
-
-.tab-button {
-  padding: 6px 12px;
-  background: transparent;
-  border: none;
-  color: var(--text-muted);
-  font-size: 0.75rem;
-  font-weight: 500;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-}
-
-.tab-button:hover {
-  color: var(--text-code);
-  background: rgba(240, 246, 252, 0.1);
-}
-
-[data-theme="light"] .tab-button:hover {
-  background: rgba(31, 35, 40, 0.1);
-}
-
-.tab-button.active {
-  color: var(--text-code);
-  background: var(--bg-secondary);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-[data-theme="light"] .tab-button.active {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
 @media (max-width: 768px) {
   .minimal-container {
     padding: 20px 16px;
@@ -388,10 +321,6 @@ body {
     margin-bottom: 12px;
   }
 
-  .code-section {
-    margin-top: 32px;
-  }
-
   .code-content {
     padding: 16px;
     font-size: 0.8rem;
@@ -399,23 +328,6 @@ body {
 
   .code-header {
     padding: 10px 14px;
-  }
-
-  .config-tabs .code-header {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .tab-buttons {
-    order: 2;
-  }
-
-  .code-filename {
-    order: 3;
-  }
-
-  .code-dots {
-    order: 1;
   }
 }
 
@@ -548,11 +460,49 @@ body {
   margin-bottom: 0;
 }
 
-.config-section h3 {
-  color: var(--text-primary);
-  font-size: 1.1rem;
-  font-weight: 600;
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin-bottom: 16px;
+}
+
+.config-content > p {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.config-content > ol {
+  margin-left: 16px;
+}
+
+.cursor-quick-install {
+  margin-bottom: 12px;
+  margin-left: 16px;
+}
+
+.installation-steps {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  color: var(--text-primary);
+}
+
+.installation-steps li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.installation-steps strong {
+  color: var(--text-primary);
+}
+
+.installation-steps code {
+  background: var(--bg-tertiary);
+  color: var(--text-code);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Roboto Mono", monospace;
+  font-size: 0.875rem;
 }
 
 @media (max-width: 768px) {

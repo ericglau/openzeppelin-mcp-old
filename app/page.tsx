@@ -3,10 +3,9 @@
 import React, { useState, useEffect } from "react";
 import "@/styles/landing.css";
 import Image from "next/image";
+import { CloseIcon, CursorIcon, AddToCursor } from "./components/icons";
 
 function ConfigModal({ isOpen, onClose, mcp }) {
-  const [activeTab, setActiveTab] = useState("claude-desktop");
-
   if (!isOpen || !mcp) return null;
 
   const configs = {
@@ -22,12 +21,12 @@ function ConfigModal({ isOpen, onClose, mcp }) {
 }`,
     },
     cursor: {
-      filename: "cursor_config.json",
+      filename: "~/.cursor/mcp.json  ",
       code: `{
   "mcpServers": {
     "openZeppelin${mcp.name.replace(/ /g, "")}": {
-      "command": "npx",
-      "args": ["mcp-remote", "${mcp.url}"]
+        "type": "streamable-http",
+        "url": "${mcp.url}"
     }
   }
 }`,
@@ -49,87 +48,54 @@ function ConfigModal({ isOpen, onClose, mcp }) {
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
-          <h2>{mcp.name} Configuration</h2>
+          <h2>{mcp.name} MCP Setup Instructions</h2>
           <button className="modal-close" onClick={onClose}>
-            ×
+            <CloseIcon />
           </button>
         </div>
-
         <div className="modal-body">
+          {/* Cursor Config */}
           <div className="config-section">
-            <h3>Client Configuration</h3>
-            <div className="config-tabs">
-              <div className="code-window">
-                <div className="code-header">
-                  <div className="code-dots">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                  <div className="tab-buttons">
-                    <button
-                      className={`tab-button ${
-                        activeTab === "claude-desktop" ? "active" : ""
-                      }`}
-                      onClick={() => setActiveTab("claude-desktop")}
-                    >
-                      Claude Desktop
-                    </button>
-                    <button
-                      className={`tab-button ${
-                        activeTab === "cursor" ? "active" : ""
-                      }`}
-                      onClick={() => setActiveTab("cursor")}
-                    >
-                      Cursor
-                    </button>
-                    <button
-                      className={`tab-button ${
-                        activeTab === "windsurf" ? "active" : ""
-                      }`}
-                      onClick={() => setActiveTab("windsurf")}
-                    >
-                      Windsurf
-                    </button>
-                  </div>
-                  <div className="code-filename">
-                    {configs[activeTab].filename}
-                  </div>
-                </div>
-                <pre className="code-content">
-                  <code>{configs[activeTab].code}</code>
-                </pre>
-              </div>
+            <div className="section-header">
+              <CursorIcon />
+              <h2>Cursor</h2>
             </div>
-          </div>
-
-          <div className="config-section">
-            <h3>Claude Code Configuration</h3>
-            <p
-              style={{
-                fontSize: "0.9rem",
-                color: "var(--text-muted)",
-                marginBottom: "16px",
-                lineHeight: "1.5",
-              }}
-            ></p>
-            <div className="config-tabs">
-              <div className="code-window">
-                <div className="code-header">
-                  <div className="code-dots">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                  <div className="code-filename">Terminal</div>
-                </div>
-                <pre className="code-content">
-                  <code>
-                    claude mcp add -t http openzeppelin-
-                    {mcp.name.toLowerCase().replace(" ", "-")} {mcp.url}
-                  </code>
-                </pre>
+            <div className="config-content">
+              <p>For quick installation, use the button below:</p>
+              <div className="cursor-quick-install">
+                <AddToCursor
+                  name={`openZeppelin${mcp.name.replace(/ /g, "")}`}
+                  url={mcp.url}
+                />
               </div>
+              <p>For manual installation:</p>
+              <ol className="installation-steps">
+                <li>
+                  <strong>Cmd + Shift + J</strong> to open Cursor Settings
+                </li>
+                <li>
+                  Select <strong>Tools & Integrations</strong>
+                </li>
+                <li>
+                  Click <strong>New MCP Server</strong>
+                </li>
+                <li>
+                  Add to your <code>mcpServers</code> config
+                </li>
+              </ol>
+            </div>
+            <div className="code-window">
+              <div className="code-header">
+                <div className="code-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div className="code-filename">{configs.cursor.filename}</div>
+              </div>
+              <pre className="code-content">
+                <code>{configs.cursor.code}</code>
+              </pre>
             </div>
           </div>
         </div>
@@ -308,7 +274,7 @@ export default function HomePage() {
                       className="mcp-config-button"
                       onClick={() => openModal(mcp)}
                     >
-                      View Configuration
+                      View Setup Instructions
                     </button>
                   </div>
                 ))}
