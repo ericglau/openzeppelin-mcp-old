@@ -291,7 +291,7 @@ export default function HomePage() {
         <div className="minimal-content">
           <h1 className="minimal-title">OpenZeppelin MCP Servers</h1>
           <p className="minimal-subtitle">
-            Model Context Protocol Servers Repository for OpenZeppelin products
+            Model Context Protocol Servers Repository for OpenZeppelin Products
           </p>
 
           <div className="features-section">
