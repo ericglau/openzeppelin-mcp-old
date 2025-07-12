@@ -450,6 +450,7 @@ body {
 
 .modal-body {
   padding: 24px;
+  color: var(--text-primary);
 }
 
 .config-section {
@@ -484,16 +485,11 @@ body {
 .installation-steps {
   margin-bottom: 20px;
   padding-left: 20px;
-  color: var(--text-primary);
 }
 
 .installation-steps li {
   margin-bottom: 8px;
   line-height: 1.5;
-}
-
-.installation-steps strong {
-  color: var(--text-primary);
 }
 
 .installation-steps code {
