@@ -5,7 +5,7 @@ import {
   TEST_CLIENT_INITIALIZED_REQUEST,
   TEST_CLIENT_TOOLS_LIST_REQUEST,
   parseJsonData,
-} from "./common";
+} from "../common";
 import { getTitleText, getInstructionsText } from "@/contracts/prompts";
 import wizardMcpPackage from "@openzeppelin/wizard-mcp/package.json";
 
