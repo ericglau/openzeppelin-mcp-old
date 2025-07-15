@@ -1,7 +1,7 @@
 import { createMcpHandler } from "@vercel/mcp-adapter";
 import { registerSolidityTools } from "@openzeppelin/wizard-mcp/src/solidity/tools";
-import { getTitleText } from "@/wizard/prompts";
-import { getInstructionsText } from "@/wizard/prompts";
+import { getTitleText } from "@/contracts/prompts";
+import { getInstructionsText } from "@/contracts/prompts";
 import wizardMcpPackage from "@openzeppelin/wizard-mcp/package.json";
 
 const LANGUAGE = "Solidity";
@@ -20,7 +20,7 @@ const serverOptions = {
 };
 
 const serverConfig = {
-  basePath: "/wizard/solidity",
+  basePath: "/contracts/solidity",
   verboseLogs: true,
   maxDuration: 60,
 };

@@ -1,30 +1,21 @@
 import { testApiHandler } from "next-test-api-route-handler";
-import * as appHandler from "../../app/wizard/solidity/[transport]/route";
+import * as appHandler from "@/contracts/stylus/[transport]/route";
 import {
   TEST_CLIENT_INITIALIZATION_REQUEST,
   TEST_CLIENT_INITIALIZED_REQUEST,
   TEST_CLIENT_TOOLS_LIST_REQUEST,
   parseJsonData,
-} from "./common";
-import { getTitleText, getInstructionsText } from "@/wizard/prompts";
+} from "../common";
+import { getTitleText, getInstructionsText } from "@/contracts/prompts";
 import wizardMcpPackage from "@openzeppelin/wizard-mcp/package.json";
 
-const SOLIDITY_TOOLS_NAMES = [
-  "solidity-erc20",
-  "solidity-erc721",
-  "solidity-erc1155",
-  "solidity-stablecoin",
-  "solidity-rwa",
-  "solidity-account",
-  "solidity-governor",
-  "solidity-custom",
-];
+const STYLUS_TOOLS_NAMES = ["stylus-erc20", "stylus-erc721", "stylus-erc1155"];
 
 it("GET Method not allowed", async () => {
   await testApiHandler({
     appHandler,
     params: { transport: "mcp" },
-    url: "/wizard/solidity/mcp",
+    url: "/contracts/stylus/mcp",
     test: async ({ fetch }) => {
       const response = await fetch({
         method: "GET",
@@ -38,11 +29,11 @@ it("GET Method not allowed", async () => {
   });
 });
 
-it("Server should initialize a client session and serve Solidity tools", async () => {
+it("Server should initialize a client session and serve Stylus tools", async () => {
   await testApiHandler({
     appHandler,
     params: { transport: "mcp" },
-    url: "/wizard/solidity/mcp",
+    url: "/contracts/stylus/mcp",
     test: async ({ fetch }) => {
       // Initialize the client session
       const responseIitialize = await fetch(TEST_CLIENT_INITIALIZATION_REQUEST);
@@ -53,24 +44,24 @@ it("Server should initialize a client session and serve Solidity tools", async (
       const responseInitializeText = parseJsonData(
         await responseIitialize.text()
       );
-      expect(getTitleText("Solidity")).toBe(
+      expect(getTitleText("Stylus")).toBe(
         responseInitializeText["result"]["serverInfo"]["name"]
       );
       expect(wizardMcpPackage.version).toBe(
         responseInitializeText["result"]["serverInfo"]["version"]
       );
-      expect(getInstructionsText("Solidity")).toBe(
+      expect(getInstructionsText("Stylus")).toBe(
         responseInitializeText["result"]["capabilities"]["instructions"]
       );
 
-      // Assert that avaiable tools are the Solidity tools
+      // Assert that avaiable tools are the Stylus tools
       const responseToolsList = await fetch(TEST_CLIENT_TOOLS_LIST_REQUEST);
       const toolsList = parseJsonData(await responseToolsList.text())["result"][
         "tools"
       ];
       const toolsNames = toolsList.map((tool) => tool.name);
-      expect(toolsNames).toEqual(expect.arrayContaining(SOLIDITY_TOOLS_NAMES));
-      expect(SOLIDITY_TOOLS_NAMES).toEqual(expect.arrayContaining(toolsNames));
+      expect(toolsNames).toEqual(expect.arrayContaining(STYLUS_TOOLS_NAMES));
+      expect(STYLUS_TOOLS_NAMES).toEqual(expect.arrayContaining(toolsNames));
     },
   });
 });

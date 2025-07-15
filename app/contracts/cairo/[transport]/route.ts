@@ -1,10 +1,10 @@
 import { createMcpHandler } from "@vercel/mcp-adapter";
-import { registerStellarTools } from "@openzeppelin/wizard-mcp/src/stellar/tools";
-import { getTitleText } from "@/wizard/prompts";
-import { getInstructionsText } from "@/wizard/prompts";
+import { registerCairoTools } from "@openzeppelin/wizard-mcp/src/cairo/tools";
+import { getTitleText } from "@/contracts/prompts";
+import { getInstructionsText } from "@/contracts/prompts";
 import wizardMcpPackage from "@openzeppelin/wizard-mcp/package.json";
 
-const LANGUAGE = "Stellar";
+const LANGUAGE = "Cairo";
 
 const serverOptions = {
   serverInfo: {
@@ -20,14 +20,14 @@ const serverOptions = {
 };
 
 const serverConfig = {
-  basePath: "/wizard/stellar",
+  basePath: "/contracts/cairo",
   verboseLogs: true,
   maxDuration: 60,
 };
 
 const handler = createMcpHandler(
   async (server) => {
-    registerStellarTools(server);
+    registerCairoTools(server);
   },
   serverOptions,
   serverConfig

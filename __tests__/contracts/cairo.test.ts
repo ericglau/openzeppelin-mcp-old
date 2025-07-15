@@ -1,25 +1,30 @@
 import { testApiHandler } from "next-test-api-route-handler";
-import * as appHandler from "../../app/wizard/stellar/[transport]/route";
+import * as appHandler from "@/contracts/cairo/[transport]/route";
 import {
   TEST_CLIENT_INITIALIZATION_REQUEST,
   TEST_CLIENT_INITIALIZED_REQUEST,
   TEST_CLIENT_TOOLS_LIST_REQUEST,
   parseJsonData,
-} from "./common";
-import { getTitleText, getInstructionsText } from "@/wizard/prompts";
+} from "../common";
+import { getTitleText, getInstructionsText } from "@/contracts/prompts";
 import wizardMcpPackage from "@openzeppelin/wizard-mcp/package.json";
 
-const STELLAR_TOOLS_NAMES = [
-  "stellar-fungible",
-  "stellar-non-fungible",
-  "stellar-stablecoin",
+const CAIRO_TOOLS_NAMES = [
+  "cairo-erc20",
+  "cairo-erc721",
+  "cairo-erc1155",
+  "cairo-account",
+  "cairo-multisig",
+  "cairo-governor",
+  "cairo-vesting",
+  "cairo-custom",
 ];
 
 it("GET Method not allowed", async () => {
   await testApiHandler({
     appHandler,
     params: { transport: "mcp" },
-    url: "/wizard/stellar/mcp",
+    url: "/contracts/cairo/mcp",
     test: async ({ fetch }) => {
       const response = await fetch({
         method: "GET",
@@ -33,11 +38,11 @@ it("GET Method not allowed", async () => {
   });
 });
 
-it("Server should initialize a client session and serve Stellar tools", async () => {
+it("Server should initialize a client session and serve Cairo tools", async () => {
   await testApiHandler({
     appHandler,
     params: { transport: "mcp" },
-    url: "/wizard/stellar/mcp",
+    url: "/contracts/cairo/mcp",
     test: async ({ fetch }) => {
       // Initialize the client session
       const responseIitialize = await fetch(TEST_CLIENT_INITIALIZATION_REQUEST);
@@ -48,24 +53,24 @@ it("Server should initialize a client session and serve Stellar tools", async ()
       const responseInitializeText = parseJsonData(
         await responseIitialize.text()
       );
-      expect(getTitleText("Stellar")).toBe(
+      expect(getTitleText("Cairo")).toBe(
         responseInitializeText["result"]["serverInfo"]["name"]
       );
       expect(wizardMcpPackage.version).toBe(
         responseInitializeText["result"]["serverInfo"]["version"]
       );
-      expect(getInstructionsText("Stellar")).toBe(
+      expect(getInstructionsText("Cairo")).toBe(
         responseInitializeText["result"]["capabilities"]["instructions"]
       );
 
-      // Assert that avaiable tools are the Stellar tools
+      // Assert that avaiable tools are the Cairo tools
       const responseToolsList = await fetch(TEST_CLIENT_TOOLS_LIST_REQUEST);
       const toolsList = parseJsonData(await responseToolsList.text())["result"][
         "tools"
       ];
       const toolsNames = toolsList.map((tool) => tool.name);
-      expect(toolsNames).toEqual(expect.arrayContaining(STELLAR_TOOLS_NAMES));
-      expect(STELLAR_TOOLS_NAMES).toEqual(expect.arrayContaining(toolsNames));
+      expect(toolsNames).toEqual(expect.arrayContaining(CAIRO_TOOLS_NAMES));
+      expect(CAIRO_TOOLS_NAMES).toEqual(expect.arrayContaining(toolsNames));
     },
   });
 });
