@@ -85,13 +85,13 @@ export function CursorIcon({ size = 24, className = "" }) {
   );
 }
 
-export function AddToCursor({ size = 32, name, url }) {
-  const jsonConfig = {
+export function AddToCursor({ size = 32, name, url, currentTheme = "light" }) {
+  const configJson = {
     type: "streamable-http",
     url: url,
   };
-  const encodedConfig = encodeURIComponent(JSON.stringify(jsonConfig));
 
+  const encodedConfig = btoa(JSON.stringify(configJson));
   return (
     <a
       href={`https://cursor.com/install-mcp?name=${name}&config=${encodedConfig}`}
@@ -99,7 +99,9 @@ export function AddToCursor({ size = 32, name, url }) {
       rel="noopener noreferrer"
     >
       <img
-        src="https://cursor.com/deeplink/mcp-install-dark.svg"
+        src={`https://cursor.com/deeplink/mcp-install-${
+          currentTheme === "light" ? "dark" : "light"
+        }.svg`}
         alt={`Add ${name} MCP server to Cursor`}
         height={size}
       />

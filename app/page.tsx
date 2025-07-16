@@ -13,7 +13,7 @@ import {
   AddToVSCode,
 } from "./components/icons";
 
-function ConfigModal({ isOpen, onClose, mcp }) {
+function ConfigModal({ isOpen, onClose, mcp, currentTheme }) {
   if (!isOpen || !mcp) return null;
 
   const configs = {
@@ -88,6 +88,7 @@ function ConfigModal({ isOpen, onClose, mcp }) {
                 <AddToCursor
                   name={`openZeppelin${mcp.name.replace(/ /g, "")}`}
                   url={mcp.url}
+                  currentTheme={currentTheme}
                 />
               </div>
               <p>For manual setup:</p>
@@ -432,6 +433,7 @@ export default function HomePage() {
         isOpen={isModalOpen}
         onClose={closeModal}
         mcp={selectedMcp}
+        currentTheme={currentTheme}
       />
     </div>
   );
