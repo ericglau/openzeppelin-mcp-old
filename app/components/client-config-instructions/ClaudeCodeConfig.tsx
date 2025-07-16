@@ -1,14 +1,9 @@
-import { ClaudeIcon } from "@/components/icons";
 export function ClaudeCodeConfig({ name, url }) {
   const config = {
     code: `claude mcp add -t http ${name.replace(/ /g, "")} ${url}`,
   };
   return (
     <div className="config-section">
-      <div className="section-header">
-        <ClaudeIcon />
-        <h2>Claude Code</h2>
-      </div>
       <div className="config-content">
         <p>
           To add the MCP Server to your claude code run the following command:

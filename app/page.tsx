@@ -6,7 +6,6 @@ import Image from "next/image";
 import {
   ThemeIcon,
   GitHubIcon,
-  VSCodeIcon,
   SolidityIcon,
   CairoIcon,
   StellarIcon,

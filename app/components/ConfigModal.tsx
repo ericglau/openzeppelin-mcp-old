@@ -1,24 +1,56 @@
-import { CloseIcon } from "@/components/icons";
+import {
+  CloseIcon,
+  CursorIcon,
+  VSCodeIcon,
+  ClaudeIcon,
+} from "@/components/icons";
 import { CursorConfig } from "@/components/client-config-instructions/CursorConfig";
 import { VSCodeConfig } from "@/components/client-config-instructions/VSCodeConfig";
 import { ClaudeDesktopConfig } from "@/components/client-config-instructions/ClaudeDesktopConfig";
 import { ClaudeCodeConfig } from "@/components/client-config-instructions/ClaudeCodeConfig";
+import { useState } from "react";
 
 export function ConfigModal({ isOpen, onClose, mcp, currentTheme }) {
   if (!isOpen || !mcp) return null;
-  // TODO Delete
-  const configs = {
-    windsurf: {
-      filename: "windsurf_config.json",
-      code: `{
-  "mcpServers": {
-    "openZeppelin${mcp.name.replace(/ /g, "")}": {
-      "command": "npx",
-      "args": ["mcp-remote", "${mcp.url}"]
-    }
-  }
-}`,
+
+  const [activeTab, setActiveTab] = useState("cursor");
+
+  const tabs = [
+    {
+      id: "cursor",
+      label: "Cursor",
+      icon: CursorIcon,
     },
+    { id: "vscode", label: "VS Code", icon: VSCodeIcon },
+    { id: "claude-desktop", label: "Claude Desktop", icon: ClaudeIcon },
+    { id: "claude-code", label: "Claude Code", icon: ClaudeIcon },
+  ];
+
+  const renderConfigContent = () => {
+    switch (activeTab) {
+      case "cursor":
+        return (
+          <CursorConfig
+            name={mcp.name}
+            url={mcp.url}
+            currentTheme={currentTheme}
+          />
+        );
+      case "vscode":
+        return <VSCodeConfig name={mcp.name} url={mcp.url} />;
+      case "claude-desktop":
+        return <ClaudeDesktopConfig name={mcp.name} url={mcp.url} />;
+      case "claude-code":
+        return <ClaudeCodeConfig name={mcp.name} url={mcp.url} />;
+      default:
+        return (
+          <CursorConfig
+            name={mcp.name}
+            url={mcp.url}
+            currentTheme={currentTheme}
+          />
+        );
+    }
   };
 
   return (
@@ -30,20 +62,22 @@ export function ConfigModal({ isOpen, onClose, mcp, currentTheme }) {
             <CloseIcon />
           </button>
         </div>
-        <div className="modal-body">
-          {/* Cursor Config */}
-          <CursorConfig
-            name={mcp.name}
-            url={mcp.url}
-            currentTheme={currentTheme}
-          />
-          {/* VSCode Config */}
-          <VSCodeConfig name={mcp.name} url={mcp.url} />
-          {/* Claude Desktop Config */}
-          <ClaudeDesktopConfig name={mcp.name} url={mcp.url} />
-          {/* Claude Code Config */}
-          <ClaudeCodeConfig name={mcp.name} url={mcp.url} />
+
+        <div className="modal-tabs">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              className={`tab-button ${activeTab === tab.id ? "active" : ""}`}
+              onClick={() => setActiveTab(tab.id)}
+            >
+              <div className="section-header">
+                <tab.icon />
+                <h3>{tab.label}</h3>
+              </div>
+            </button>
+          ))}
         </div>
+        <div className="modal-body">{renderConfigContent()}</div>
       </div>
     </div>
   );

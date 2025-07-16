@@ -1,5 +1,3 @@
-import { ClaudeIcon } from "@/components/icons";
-
 export function ClaudeDesktopConfig({ name, url }) {
   const config = {
     filename: "claude_desktop_config.json",
@@ -15,10 +13,6 @@ export function ClaudeDesktopConfig({ name, url }) {
 
   return (
     <div className="config-section">
-      <div className="section-header">
-        <ClaudeIcon />
-        <h2>Claude Desktop</h2>
-      </div>
       <div className="config-content">
         <p>For manual setup:</p>
         <ol className="installation-steps">

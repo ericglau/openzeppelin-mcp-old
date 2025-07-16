@@ -1,5 +1,3 @@
-import { VSCodeIcon } from "@/components/icons";
-
 function AddToVSCode({ size = 32, name, url }) {
   const jsonConfig = {
     name: name,
@@ -37,10 +35,6 @@ export function VSCodeConfig({ name, url }) {
   };
   return (
     <div className="config-section">
-      <div className="section-header">
-        <VSCodeIcon />
-        <h2>VS Code</h2>
-      </div>
       <div className="config-content">
         <p>For quick setup, use the button below:</p>
         <div className="cursor-quick-install">

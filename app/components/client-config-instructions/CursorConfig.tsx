@@ -1,5 +1,3 @@
-import { CursorIcon } from "@/components/icons";
-
 function AddToCursorButton({ size = 32, name, url, currentTheme = "light" }) {
   const configJson = {
     type: "streamable-http",
@@ -39,10 +37,6 @@ export function CursorConfig({ name, url, currentTheme }) {
 
   return (
     <div className="config-section">
-      <div className="section-header">
-        <CursorIcon />
-        <h2>Cursor</h2>
-      </div>
       <div className="config-content">
         <p>For quick setup, use the button below:</p>
         <div className="cursor-quick-install">
