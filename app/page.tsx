@@ -106,24 +106,28 @@ export default function HomePage() {
   const AVAILABLE_MCPS = [
     {
       name: "Solidity Contracts",
+      icon: SolidityIcon,
       description:
         "Generate Solidity secure smart contracts based on OpenZeppelin templates",
       url: `${BASE_URL}contracts/solidity/mcp`,
     },
     {
       name: "Cairo Contracts",
+      icon: CairoIcon,
       description:
         "Generate Cairo secure smart contracts based on OpenZeppelin templates",
       url: `${BASE_URL}contracts/cairo/mcp`,
     },
     {
       name: "Stellar Contracts",
+      icon: StellarIcon,
       description:
         "Generate Stellar secure smart contracts based on OpenZeppelin templates",
       url: `${BASE_URL}contracts/stellar/mcp`,
     },
     {
       name: "Stylus Contracts",
+      icon: StylusIcon,
       description:
         "Generate Stylus secure smart contracts based on OpenZeppelin templates",
       url: `${BASE_URL}contracts/stylus/mcp`,

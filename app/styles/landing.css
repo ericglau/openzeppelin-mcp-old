@@ -336,7 +336,6 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  margin-top: 20px;
 }
 
 .mcp-card {
@@ -358,6 +357,9 @@ body {
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .mcp-description {
