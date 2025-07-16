@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import "@/styles/landing.css";
 import Image from "next/image";
 import {
+  ThemeIcon,
   GitHubIcon,
   CloseIcon,
   CursorIcon,
@@ -286,17 +287,13 @@ function ThemeToggle({ onThemeChange }) {
     onThemeChange(nextTheme);
   };
 
-  const getThemeIcon = () => {
-    return theme === "light" ? "☀️" : "🌙";
-  };
-
   return (
     <button
       className="theme-toggle"
       onClick={toggleTheme}
       title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
     >
-      {getThemeIcon()}
+      <ThemeIcon theme={theme} />
     </button>
   );
 }
