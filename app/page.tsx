@@ -106,29 +106,53 @@ export default function HomePage() {
     {
       name: "Solidity Contracts",
       icon: SolidityIcon,
-      description:
-        "Generate Solidity secure smart contracts based on OpenZeppelin templates",
+      description: () => {
+        return (
+          <p className="mcp-description">
+            Generate Solidity secure smart contracts <br /> based on
+            OpenZeppelin templates
+          </p>
+        );
+      },
       url: `${BASE_URL}contracts/solidity/mcp`,
     },
     {
       name: "Cairo Contracts",
       icon: CairoIcon,
-      description:
-        "Generate Cairo secure smart contracts based on OpenZeppelin templates",
+      description: () => {
+        return (
+          <p className="mcp-description">
+            Generate Cairo secure smart contracts <br /> based on OpenZeppelin
+            templates
+          </p>
+        );
+      },
       url: `${BASE_URL}contracts/cairo/mcp`,
     },
     {
       name: "Stellar Contracts",
       icon: StellarIcon,
-      description:
-        "Generate Stellar secure smart contracts based on OpenZeppelin templates",
+      description: () => {
+        return (
+          <p className="mcp-description">
+            Generate Cairo secure smart contracts <br /> based on OpenZeppelin
+            templates
+          </p>
+        );
+      },
       url: `${BASE_URL}contracts/stellar/mcp`,
     },
     {
       name: "Stylus Contracts",
       icon: StylusIcon,
-      description:
-        "Generate Stylus secure smart contracts based on OpenZeppelin templates",
+      description: () => {
+        return (
+          <p className="mcp-description">
+            Generate Cairo secure smart contracts <br /> based on OpenZeppelin
+            templates
+          </p>
+        );
+      },
       url: `${BASE_URL}contracts/stylus/mcp`,
     },
   ];
@@ -178,7 +202,7 @@ export default function HomePage() {
                 <mcp.icon theme={currentTheme} />
                 <h3>{mcp.name}</h3>
               </div>
-              <p className="mcp-description">{mcp.description}</p>
+              <mcp.description />
               <p className="mcp-view-config">{"View Setup Instructions →"}</p>
             </div>
           ))}

@@ -2,15 +2,14 @@ export function ThemeIcon({ theme }) {
   if (theme === "light") {
     return (
       <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
+        width="21"
+        height="20"
+        viewBox="0 0 21 20"
         fill="none"
-        transform="scale(1.15)"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M18.25 15.0314C17.7575 15.1436 17.2459 15.2027 16.7209 15.2027C12.8082 15.2027 9.63607 11.9185 9.63607 7.86709C9.63607 6.75253 9.87614 5.69603 10.3057 4.75C7.12795 5.47387 4.75 8.40659 4.75 11.9143C4.75 15.9657 7.9221 19.25 11.8348 19.25C14.6711 19.25 17.1182 17.5242 18.25 15.0314Z"
+          d="M20 13.7631C19.3069 13.9024 18.5868 13.9758 17.8479 13.9758C12.3412 13.9758 7.87669 9.89883 7.87669 4.86949C7.87669 3.4859 8.21457 2.17438 8.81913 1C4.34674 1.8986 1 5.53921 1 9.89361C1 14.9229 5.46444 19 10.9712 19C14.963 19 18.4071 16.8576 20 13.7631Z"
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
@@ -21,71 +20,70 @@ export function ThemeIcon({ theme }) {
   } else {
     return (
       <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
+        width="28"
+        height="27"
+        viewBox="0 0 28 27"
         fill="none"
-        transform="scale(1.15)"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M15.25 12C15.25 13.7949 13.7949 15.25 12 15.25C10.2051 15.25 8.75 13.7949 8.75 12C8.75 10.2051 10.2051 8.75 12 8.75C13.7949 8.75 15.25 10.2051 15.25 12Z"
+          d="M18.1776 13.5C18.1776 15.9255 16.2112 17.8919 13.7857 17.8919C11.3602 17.8919 9.3938 15.9255 9.3938 13.5C9.3938 11.0744 11.3602 9.10809 13.7857 9.10809C16.2112 9.10809 18.1776 11.0744 18.1776 13.5Z"
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
-          d="M12 2.75V4.25"
+          d="M13.7858 1V3.02703"
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
-          d="M17.2501 6.75L16.0659 7.93417"
+          d="M20.8804 6.40546L19.2802 8.00569"
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
-          d="M21.25 12.0001L19.75 12.0001"
+          d="M26.2858 13.5001H24.2588"
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
-          d="M17.2501 17.2501L16.0659 16.066"
+          d="M20.8804 20.5948L19.2802 18.9946"
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
-          d="M12 19.75V21.25"
+          d="M13.7858 23.973V26"
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
-          d="M7.93414 16.0659L6.75 17.25"
+          d="M8.29123 18.9944L6.69104 20.5946"
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
-          d="M4.25 12.0001L2.75 12.0001"
+          d="M3.31279 13.5001H1.28577"
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
-          d="M7.93402 7.93423L6.74988 6.75003"
+          d="M8.29123 8.00573L6.69104 6.40546"
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
@@ -98,24 +96,23 @@ export function ThemeIcon({ theme }) {
 export function GitHubIcon({}) {
   return (
     <svg
-      width="12"
-      height="13"
-      viewBox="0 0 12 13"
+      width="20"
+      height="22"
+      viewBox="0 0 20 22"
       fill="none"
-      transform="scale(1.5)"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M8.04172 11.8333V9.66667C8.11707 8.98811 7.92251 8.30715 7.50005 7.77083C9.12505 7.77083 10.7501 6.6875 10.7501 4.79167C10.7934 4.11458 10.6038 3.44833 10.2084 2.89583C10.3601 2.27292 10.3601 1.62292 10.2084 1C10.2084 1 9.66672 1 8.58338 1.8125C7.15338 1.54167 5.68005 1.54167 4.25005 1.8125C3.16672 1 2.62505 1 2.62505 1C2.46255 1.62292 2.46255 2.27292 2.62505 2.89583C2.23065 3.4461 2.03922 4.11609 2.08338 4.79167C2.08338 6.6875 3.70838 7.77083 5.33338 7.77083C5.12213 8.03625 4.96505 8.33958 4.87297 8.66458C4.78088 8.98958 4.7538 9.33083 4.79172 9.66667V11.8333"
+        d="M14 21V17C14.1392 15.7473 13.78 14.4901 13 13.5C16 13.5 19 11.5 19 8C19.08 6.75 18.73 5.52 18 4.5C18.28 3.35 18.28 2.15 18 1C18 1 17 1 15 2.5C12.36 2 9.64004 2 7.00004 2.5C5.00004 1 4.00004 1 4.00004 1C3.70004 2.15 3.70004 3.35 4.00004 4.5C3.27191 5.51588 2.91851 6.75279 3.00004 8C3.00004 11.5 6.00004 13.5 9.00004 13.5C8.61004 13.99 8.32004 14.55 8.15004 15.15C7.98004 15.75 7.93004 16.38 8.00004 17V21"
         stroke="currentColor"
-        strokeWidth="1.1"
+        strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
-        d="M4.79167 9.66671C2.34875 10.75 2.08333 8.58337 1 8.58337"
+        d="M8 17C3.49 19 3 15 1 15"
         stroke="currentColor"
-        strokeWidth="1.1"
+        strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
