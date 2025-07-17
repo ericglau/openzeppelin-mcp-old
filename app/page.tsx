@@ -169,18 +169,17 @@ export default function HomePage() {
 
         <div className="mcp-grid">
           {AVAILABLE_MCPS.map((mcp, index) => (
-            <div key={index} className="mcp-card">
+            <div
+              key={index}
+              className="mcp-card"
+              onClick={() => openModal(mcp)}
+            >
               <div className="mcp-name">
                 <mcp.icon theme={currentTheme} />
                 <h3>{mcp.name}</h3>
               </div>
               <p className="mcp-description">{mcp.description}</p>
-              <button
-                className="mcp-config-button"
-                onClick={() => openModal(mcp)}
-              >
-                {"View Setup Instructions →"}
-              </button>
+              <p className="mcp-view-config">{"View Setup Instructions →"}</p>
             </div>
           ))}
         </div>

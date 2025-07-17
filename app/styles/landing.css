@@ -285,7 +285,7 @@ body {
   background: var(--bg-primary);
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  padding: 25px;
+  padding: 25px 30px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -295,18 +295,22 @@ body {
   background-color: var(--bg-hover);
   transform: translateY(-1px);
   transform: scale(1.01);
+  cursor: pointer;
 }
 
 .mcp-name {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.mcp-name h3 {
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: 140%;
   letter-spacing: -0.6px;
   color: var(--text-primary);
-  display: flex;
-  align-items: center;
-  gap: 5px;
 }
 
 .mcp-description {
@@ -319,7 +323,7 @@ body {
   text-align: left;
 }
 
-.mcp-config-button {
+.mcp-view-config {
   background: transparent;
   font-size: 16px;
   font-style: normal;
@@ -331,9 +335,7 @@ body {
   border: 0px solid;
 }
 
-.mcp-config-button:hover {
-  color: var(--text-accent);
-  cursor: pointer;
+.mcp-card:hover .mcp-view-config {
   text-decoration: underline;
 }
 
