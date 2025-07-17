@@ -76,12 +76,14 @@ body {
   color: var(--text-primary);
   text-decoration: none;
   border-radius: 8px;
+  border: 0px solid var(--bg-primary);
+  transform: translateY(0) scale(1);
   transition: all 0.2s ease;
 }
 .header-button:hover {
+  cursor: pointer;
   background-color: var(--bg-hover);
-  transform: translateY(-1px);
-  transform: scale(1.05);
+  transform: translateY(-1px) scale(1.05);
 }
 
 [data-theme="light"] .header-button {
@@ -89,7 +91,7 @@ body {
 }
 
 [data-theme="dark"] .header-button {
-  border: 1px solid var(--border-color);
+  border: 0px solid var(--bg-primary);
 }
 
 [data-theme="dark"] .header-button:hover {
@@ -275,9 +277,9 @@ body {
 /* MCP Cards */
 .mcp-grid {
   margin-top: 40px;
-  width: 60%;
+  width: 54%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 25px;
 }
 
