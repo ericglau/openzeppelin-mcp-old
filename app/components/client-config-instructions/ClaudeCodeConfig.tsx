@@ -1,6 +1,6 @@
 export function ClaudeCodeConfig({ name, url }) {
   const config = {
-    code: `claude mcp add -t http ${name.replace(/ /g, "")} ${url}`,
+    code: `claude mcp add -t http OpenZeppelin${name.replace(/ /g, "")} ${url}`,
   };
   return (
     <div className="config-section">

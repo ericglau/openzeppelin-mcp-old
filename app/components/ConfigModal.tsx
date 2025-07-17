@@ -71,7 +71,7 @@ export function ConfigModal({ isOpen, onClose, mcp, currentTheme }) {
               onClick={() => setActiveTab(tab.id)}
             >
               <div className="section-header">
-                <tab.icon />
+                <tab.icon theme={currentTheme} />
                 <h3>{tab.label}</h3>
               </div>
             </button>
