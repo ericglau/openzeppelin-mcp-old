@@ -14,7 +14,7 @@ body {
 
 .page-container {
   min-height: 100vh;
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     sans-serif;
   transition: background-color 0.3s ease;
@@ -31,6 +31,7 @@ body {
 }
 
 .header-content {
+  background: var(--bg-primary);
   margin: 0 auto;
   padding: 12px 24px;
   display: flex;
@@ -62,46 +63,45 @@ body {
 .header-right {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
-.github-button {
+.header-button {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 44px;
   height: 44px;
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
   color: var(--text-primary);
   text-decoration: none;
   border-radius: 8px;
-  border: 1px solid rgba(48, 54, 61, 0.3);
   transition: all 0.2s ease;
 }
-
-[data-theme="light"] .github-button {
-  border: 1px solid rgba(208, 215, 222, 0.3);
-}
-
-.github-button:hover {
-  background: var(--bg-tertiary);
+.header-button:hover {
+  background-color: var(--bg-hover);
   transform: translateY(-1px);
-  border-color: var(--border-color);
+  transform: scale(1.05);
 }
 
-.github-button svg {
-  transition: transform 0.2s ease;
+[data-theme="light"] .header-button {
+  border: 0px solid var(--bg-primary);
 }
 
-.github-button:hover svg {
-  transform: scale(1.1);
+[data-theme="dark"] .header-button {
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .header-button:hover {
+  border: 0px solid var(--bg-primary);
 }
 
 :root {
-  --bg-primary: #1a1a1a;
-  --bg-secondary: #0d1117;
-  --bg-tertiary: #161b22;
-  --border-color: #30363d;
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #0a0a0a;
+  --bg-tertiary: #111111;
+  --bg-hover: #181818;
+  --border-color: #262626;
   --text-primary: #ffffff;
   --text-secondary: #cccccc;
   --text-muted: #7d8590;
@@ -115,11 +115,12 @@ body {
 
 [data-theme="light"] {
   --bg-primary: #ffffff;
-  --bg-secondary: #f6f8fa;
-  --bg-tertiary: #eaeef2;
-  --border-color: #d0d7de;
-  --text-primary: #1f2328;
-  --text-secondary: #656d76;
+  --bg-secondary: #fafafa;
+  --bg-tertiary: #f0f0f0;
+  --bg-hover: #f4f4f4;
+  --border-color: #e9e9ea;
+  --text-primary: #0a0a0a;
+  --text-secondary: #737373;
   --text-muted: #656d76;
   --text-code: #1f2328;
   --text-accent: #3b82f6;
@@ -129,69 +130,38 @@ body {
   --dot-inactive: #656d76;
 }
 
-.minimal-container {
-  min-height: calc(100vh - 60px);
-  width: 100%;
+.main-container {
+  text-align: center;
+  background: var(--bg-secondary);
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     sans-serif;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
 }
 
-.minimal-content {
-  text-align: center;
-  max-width: 850px;
-  width: 100%;
-}
-
-.theme-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  background: var(--bg-secondary);
-  border: 1px solid rgba(48, 54, 61, 0.3);
-  border-radius: 8px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
+.main-title {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.92px;
   color: var(--text-primary);
-}
-
-[data-theme="light"] .theme-toggle {
-  border: 1px solid rgba(208, 215, 222, 0.3);
-}
-
-.theme-toggle:hover {
-  background: var(--bg-tertiary);
-  transform: scale(1.05);
-  border-color: var(--border-color);
-}
-
-.minimal-title {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 16px;
-  letter-spacing: -0.025em;
+  margin-top: 30px;
   transition: color 0.3s ease;
 }
 
-.minimal-subtitle {
-  font-size: clamp(1rem, 2.5vw, 1.125rem);
-  color: var(--text-secondary);
-  line-height: 1.6;
+.main-subtitle {
+  font-size: 20px;
+  font-style: normal;
   font-weight: 400;
+  line-height: 130%;
+  letter-spacing: -0.6px;
+  color: var(--text-secondary);
+  margin-top: 16px;
   padding: 0 16px;
-  transition: color 0.3s ease;
-}
-
-.features-section {
-  margin-top: 40px;
-  width: 100%;
 }
 
 .feature-item {
@@ -204,15 +174,6 @@ body {
   line-height: 1.6;
   color: var(--text-secondary);
   transition: all 0.3s ease;
-}
-
-.code-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 24px;
-  text-align: center;
-  transition: color 0.3s ease;
 }
 
 .code-window {
@@ -289,7 +250,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .minimal-container {
+  .main-container {
     padding: 20px 16px;
   }
 
@@ -297,28 +258,8 @@ body {
     padding: 12px 16px;
   }
 
-  .header-right {
-    gap: 12px;
-  }
-
-  .github-button {
-    width: 36px;
-    height: 36px;
-  }
-
-  .github-button svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  .theme-toggle {
-    width: 36px;
-    height: 36px;
-    font-size: 1rem;
-  }
-
-  .minimal-title {
-    margin-bottom: 12px;
+  .main-title {
+    margin-top: 18px;
   }
 
   .code-content {
@@ -333,66 +274,67 @@ body {
 
 /* MCP Cards */
 .mcp-grid {
+  margin-top: 40px;
+  width: 60%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  gap: 25px;
 }
 
 .mcp-card {
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  padding: 20px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
+  transition: all 0.2s ease;
 }
-
-.mcp-content {
-  flex: 1;
+.mcp-card:hover {
+  background-color: var(--bg-hover);
+  transform: translateY(-1px);
+  transform: scale(1.01);
 }
 
 .mcp-name {
-  font-size: 1.2rem;
+  font-size: 20px;
+  font-style: normal;
   font-weight: 600;
+  line-height: 140%;
+  letter-spacing: -0.6px;
   color: var(--text-primary);
-  margin-bottom: 8px;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
 }
 
 .mcp-description {
-  color: var(--text-muted);
-  line-height: 1.5;
-  font-size: 0.9rem;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: -0.32px;
+  color: var(--text-secondary);
+  text-align: left;
 }
 
 .mcp-config-button {
   background: transparent;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: -0.32px;
+  text-align: left;
   color: var(--text-primary);
-  border: 2px solid var(--border-color);
-  border-radius: 6px;
-  padding: 10px 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  font-size: 0.9rem;
+  border: 0px solid;
 }
 
 .mcp-config-button:hover {
-  border-color: var(--text-primary);
-  color: var(--text-primary);
-  background: var(--bg-tertiary);
-  transform: translateY(-1px);
-}
-
-[data-theme="dark"] .mcp-config-button {
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-[data-theme="light"] .mcp-config-button {
-  border-color: rgba(0, 0, 0, 0.15);
+  color: var(--text-accent);
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 /* Modal */
@@ -423,7 +365,7 @@ body {
 
 .modal-tabs {
   display: flex;
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
   border-bottom: 1px solid var(--border-color);
   overflow-x: auto;
 }
@@ -547,7 +489,6 @@ body {
 }
 
 .installation-steps code {
-  background: var(--bg-tertiary);
   color: var(--text-code);
   padding: 2px 6px;
   border-radius: 4px;
@@ -557,6 +498,7 @@ body {
 
 @media (max-width: 768px) {
   .mcp-grid {
+    width: 90%;
     grid-template-columns: 1fr;
     gap: 16px;
   }

@@ -49,7 +49,7 @@ function ThemeToggle({ onThemeChange }) {
 
   return (
     <button
-      className="theme-toggle"
+      className="header-button"
       onClick={toggleTheme}
       title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
     >
@@ -64,7 +64,7 @@ function GitHubButton() {
       href="https://github.com/OpenZeppelin/openzeppelin-mcp"
       target="_blank"
       rel="noopener noreferrer"
-      className="github-button"
+      className="header-button"
       title="View on GitHub"
     >
       <GitHubIcon />
@@ -160,37 +160,29 @@ export default function HomePage() {
         </div>
       </header>
 
-      <div className="minimal-container">
-        <div className="minimal-content">
-          <h1 className="minimal-title">OpenZeppelin MCP Servers</h1>
-          <p className="minimal-subtitle">
-            Model Context Protocol Servers Repository for OpenZeppelin Products
-          </p>
+      <div className="main-container">
+        <h1 className="main-title">MCP Servers</h1>
+        <p className="main-subtitle">
+          Model Context Protocol Servers <br /> Repository for OpenZeppelin
+          Products
+        </p>
 
-          <div className="features-section">
-            <h2 className="code-title">Available MCP Servers</h2>
-            <div className="feature-item">
-              <div className="mcp-grid">
-                {AVAILABLE_MCPS.map((mcp, index) => (
-                  <div key={index} className="mcp-card">
-                    <div className="mcp-content">
-                      <div className="mcp-name">
-                        <mcp.icon />
-                        <h3>{mcp.name}</h3>
-                      </div>
-                      <p className="mcp-description">{mcp.description}</p>
-                    </div>
-                    <button
-                      className="mcp-config-button"
-                      onClick={() => openModal(mcp)}
-                    >
-                      View Setup Instructions
-                    </button>
-                  </div>
-                ))}
+        <div className="mcp-grid">
+          {AVAILABLE_MCPS.map((mcp, index) => (
+            <div key={index} className="mcp-card">
+              <div className="mcp-name">
+                <mcp.icon theme={currentTheme} />
+                <h3>{mcp.name}</h3>
               </div>
+              <p className="mcp-description">{mcp.description}</p>
+              <button
+                className="mcp-config-button"
+                onClick={() => openModal(mcp)}
+              >
+                {"View Setup Instructions →"}
+              </button>
             </div>
-          </div>
+          ))}
         </div>
       </div>
       <ConfigModal
