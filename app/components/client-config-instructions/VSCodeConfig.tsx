@@ -53,10 +53,10 @@ export function VSCodeConfig({ name, url }) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Add an MCP server to your workspace{" "}
+                Add an MCP server to your workspace
               </a>
             </strong>
-            using the given configuration
+            {" "}using the given configuration
           </li>
           <li>
             Start the MCP server according to{" "}
