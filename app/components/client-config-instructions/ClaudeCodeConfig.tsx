@@ -6,7 +6,7 @@ export function ClaudeCodeConfig({ name, url }) {
     <div className="config-section">
       <div className="config-content">
         <p>
-          To add the MCP Server to your claude code run the following command:
+          Run the following command:
         </p>
         <div className="code-window">
           <div className="code-header">
