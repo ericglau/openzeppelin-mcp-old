@@ -17,7 +17,7 @@ The following MCP servers are provided:
 - Stellar Contracts
 - Stylus Contracts
 
-These servers are based on the [OpenZeppelin Contracts MCP](https://github.com/OpenZeppelin/contracts-wizard/blob/master/packages/mcp/README.md) package, which can also be run locally by following the instructions in the linked readme.
+These servers are hosted versions of the [OpenZeppelin Contracts MCP](https://github.com/OpenZeppelin/contracts-wizard/blob/master/packages/mcp/README.md) package, which can also be run locally by following the instructions in the linked readme.
 
 ## Local Development
 
