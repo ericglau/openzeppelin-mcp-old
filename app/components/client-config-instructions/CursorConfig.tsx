@@ -49,7 +49,7 @@ export function CursorConfig({ name, url, currentTheme }) {
         <p>For manual setup:</p>
         <ol className="installation-steps">
           <li>
-            <strong>Cmd + Shift + J</strong> to open Cursor Settings
+            <strong>Cmd + Shift + J</strong> to open Cursor settings
           </li>
           <li>
             Select <strong>Tools & Integrations</strong>
@@ -58,7 +58,7 @@ export function CursorConfig({ name, url, currentTheme }) {
             Click <strong>New MCP Server</strong>
           </li>
           <li>
-            Add to your <code>mcpServers</code> config
+            Add the MCP to your <code>mcpServers</code> config
           </li>
         </ol>
       </div>
