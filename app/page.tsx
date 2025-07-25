@@ -184,12 +184,35 @@ export default function HomePage() {
           ))}
         </div>
       </div>
+
       <ConfigModal
         isOpen={isModalOpen}
         onClose={closeModal}
         mcp={selectedMcp}
         currentTheme={currentTheme}
       />
+      <footer className="page-footer">
+        <p>
+          &copy; OpenZeppelin 2017-2025 |{" "}
+          <a
+            href="https://www.openzeppelin.com/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-link"
+          >
+            Privacy
+          </a>{" "}
+          |{" "}
+          <a
+            href="https://www.openzeppelin.com/tos"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-link"
+          >
+            Terms of use
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }
