@@ -450,12 +450,20 @@ body {
   overflow-y: auto;
 }
 
-.config-section {
-  margin-bottom: 32px;
+.modal-npm-link {
 }
 
-.config-section:last-child {
-  margin-bottom: 0;
+.modal-npm-link a {
+  text-decoration: none;
+}
+
+.modal-npm-link a:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
+.config-section {
+  margin-bottom: 20px;
 }
 
 .section-header {
@@ -514,7 +522,6 @@ body {
 .page-footer p {
   color: var(--text-secondary);
   font-size: 12px;
-  margin: 0;
 }
 
 .footer-link {
