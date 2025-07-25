@@ -99,8 +99,17 @@ export function ConfigModal({ isOpen, onClose, mcp, currentTheme }) {
             </button>
           ))}
         </div>
+
         <div className="modal-body">
           {renderConfigContent()}
+        </div>
+
+        <div className="modal-header">
+          <h3>What it does</h3>
+        </div>
+
+        <div className="modal-body">
+          Generate Solidity secure smart contracts based on OpenZeppelin templates.<br/>&nbsp;<br/>
           <div className="modal-npm-link">
             {" "}
             Powered by the{" "}
