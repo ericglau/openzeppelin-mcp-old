@@ -231,9 +231,9 @@
 
     "@openzeppelin/wizard-common": ["@openzeppelin/wizard-common@0.0.2", "", {}, "sha512-JFEzCdORjaTRN0aEgAJavz59F+Z0GyIr+yHDvmqByiaSN8OUJwNw/OUNrIWM27gfgovVXpgw1AH883VxtWifkg=="],
 
-    "@openzeppelin/wizard-stellar": ["@openzeppelin/wizard-stellar@0.4.1", "", {}, "sha512-L25XPRVvUcr+D/u0YHw2aifytH4/6iRVMxQkSlbgExmiGngqeb3yiPSpLOEls/ROnKfK8kLiv0wnZkrvn4WE4Q=="],
+    "@openzeppelin/wizard-stellar": ["@openzeppelin/wizard-stellar@0.4.2", "", {}, "sha512-8t1Swea7dvC1lCPb1YvFF9AqroqQJ47QBpLpMxevaoLi5avNMbKln2hkGCNittkGgUReaS2i4TbYjxkjHIJOyA=="],
 
-    "@openzeppelin/wizard-stylus": ["@openzeppelin/wizard-stylus@0.2.0-alpha.5", "", {}, "sha512-oAaOmp0eYRCLdm646uzh1M9bVnHBgftErjGVt3jCWA7H9s/5XSVS2MdBFE/uVhp4XObC6pe3BeEdX/L5RdmFGQ=="],
+    "@openzeppelin/wizard-stylus": ["@openzeppelin/wizard-stylus@0.2.0", "", {}, "sha512-Yzc3x9uc/QJU4zY4xKqncbY3sP9p6QqKsQeL4tR3BVdjh45dcbJs8NBQE/Zhh4K6xmFkHmsPstOJr4OzZhfbPg=="],
 
     "@pkgjs/parseargs": ["@pkgjs/parseargs@0.11.0", "", {}, "sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg=="],
 
