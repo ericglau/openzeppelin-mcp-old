@@ -170,7 +170,6 @@ export default function HomePage() {
           Model Context Protocol Servers <br /> Repository for OpenZeppelin
           Products
         </p>
-
         <div className="mcp-grid">
           {AVAILABLE_MCPS.map((mcp, index) => (
             <div

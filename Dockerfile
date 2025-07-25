@@ -1,6 +1,6 @@
 # Build stage
-FROM imbios/bun-node:23-debian AS builder
-ENV NEXT_TELEMETRY_DISABLED 1
+FROM oven/bun:slim AS builder
+ENV NEXT_TELEMETRY_DISABLED=1
 WORKDIR /app
 
 # Install dependencies
@@ -14,9 +14,13 @@ COPY public/ ./public/
 RUN bun run build
 
 # Runtime stage
-FROM imbios/bun-node:23-debian AS runner
-ENV NODE_ENV production
-ENV NEXT_TELEMETRY_DISABLED 1
+FROM oven/bun:slim  AS runner
+ARG NEXT_PUBLIC_GA4_MEASUREMENT_ID
+ARG GA4_API_SECRET
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV NEXT_PUBLIC_GA4_MEASUREMENT_ID=$NEXT_PUBLIC_GA4_MEASUREMENT_ID
+ENV GA4_API_SECRET=$GA4_API_SECRET
 WORKDIR /app
 
 # Copy built app from builder stage

@@ -3,6 +3,7 @@ import { registerStellarTools } from "@openzeppelin/wizard-mcp/src/stellar/tools
 import { getTitleText } from "@/contracts/prompts";
 import { getInstructionsText } from "@/contracts/prompts";
 import wizardMcpPackage from "@openzeppelin/wizard-mcp/package.json";
+import { gaAnalyticsWrapper } from "@/libraries/ga-analytics-wrapper";
 
 const LANGUAGE = "Stellar";
 
@@ -25,13 +26,15 @@ const serverConfig = {
   maxDuration: 60,
 };
 
-const handler = createMcpHandler(
+const mcpHandler = createMcpHandler(
   async (server) => {
     registerStellarTools(server);
   },
   serverOptions,
   serverConfig
 );
+
+const handler = gaAnalyticsWrapper(mcpHandler);
 
 export const GET = handler;
 export const POST = handler;

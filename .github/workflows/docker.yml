@@ -48,6 +48,9 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
+          build-args: |
+            GA4_API_SECRET=${{ secrets.GA4_API_SECRET }}
+            NEXT_PUBLIC_GA4_MEASUREMENT_ID=${{ secrets.NEXT_PUBLIC_GA4_MEASUREMENT_ID }}
           tags: |
             ${{ env.REGISTRY }}/openzeppelin-mcp:latest
             ${{ env.REGISTRY }}/openzeppelin-mcp:${{ github.event.release.tag_name }}
