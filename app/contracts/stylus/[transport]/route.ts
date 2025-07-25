@@ -1,4 +1,4 @@
-import { createMcpHandler } from "@vercel/mcp-adapter";
+import { createMcpHandler } from "mcp-handler";
 import { registerStylusTools } from "@openzeppelin/wizard-mcp/src/stylus/tools";
 import { getTitleText } from "@/contracts/prompts";
 import { getInstructionsText } from "@/contracts/prompts";

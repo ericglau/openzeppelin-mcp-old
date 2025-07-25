@@ -5,7 +5,7 @@
       "dependencies": {
         "@next/third-parties": "^15.4.4",
         "@openzeppelin/wizard-mcp": "^0.0.4",
-        "@vercel/mcp-adapter": "^0.11.1",
+        "mcp-handler": "^1.0.1",
         "next": "^15.3.3",
         "react": "^19.1.0",
         "react-dom": "^19.1.0",
@@ -336,8 +336,6 @@
     "@unrs/resolver-binding-win32-ia32-msvc": ["@unrs/resolver-binding-win32-ia32-msvc@1.11.0", "", { "os": "win32", "cpu": "ia32" }, "sha512-HYchBYOZ7WN266VjoGm20xFv5EonG/ODURRgwl9EZT7Bq1nLEs6VKJddzfFdXEAho0wfFlt8L/xIiE29Pmy1RA=="],
 
     "@unrs/resolver-binding-win32-x64-msvc": ["@unrs/resolver-binding-win32-x64-msvc@1.11.0", "", { "os": "win32", "cpu": "x64" }, "sha512-+oLKLHw3I1UQo4MeHfoLYF+e6YBa8p5vYUw3Rgt7IDzCs+57vIZqQlIo62NDpYM0VG6BjWOwnzBczMvbtH8hag=="],
-
-    "@vercel/mcp-adapter": ["@vercel/mcp-adapter@0.11.1", "", { "dependencies": { "chalk": "^5.3.0", "commander": "^11.1.0", "redis": "^4.6.0" }, "peerDependencies": { "@modelcontextprotocol/sdk": "^1.12.0", "next": ">=13.0.0" }, "optionalPeers": ["next"], "bin": { "create-mcp-route": "dist/cli/index.js", "mcp-adapter": "dist/cli/index.js" } }, "sha512-6IUuBSrHhc4nn4g/B64LCPDJGAQsChs60HKSzcifkQd7/0bgiIwAQ29ap6FdFHwYvRsXC4UcVPRcBUxhK9PsgQ=="],
 
     "@whatwg-node/disposablestack": ["@whatwg-node/disposablestack@0.0.6", "", { "dependencies": { "@whatwg-node/promise-helpers": "^1.0.0", "tslib": "^2.6.3" } }, "sha512-LOtTn+JgJvX8WfBVJtF08TGrdjuFzGJc4mkP8EdDI8ADbvO7kiexYep1o8dwnt0okb0jYclCDXF13xU7Ge4zSw=="],
 
@@ -700,6 +698,8 @@
     "makeerror": ["makeerror@1.0.12", "", { "dependencies": { "tmpl": "1.0.5" } }, "sha512-JmqCvUhmt43madlpFzG4BQzG2Z3m6tvQDNKdClZnO3VbIudJYmxsT0FNJMeiB2+JTSlTQTSbU8QdesVmwJcmLg=="],
 
     "math-intrinsics": ["math-intrinsics@1.1.0", "", {}, "sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g=="],
+
+    "mcp-handler": ["mcp-handler@1.0.1", "", { "dependencies": { "chalk": "^5.3.0", "commander": "^11.1.0", "redis": "^4.6.0" }, "peerDependencies": { "@modelcontextprotocol/sdk": "^1.12.0", "next": ">=13.0.0" }, "optionalPeers": ["next"], "bin": { "create-mcp-route": "dist/cli/index.js", "mcp-handler": "dist/cli/index.js", "mcp-adapter": "dist/cli/index.js" } }, "sha512-a4AB6eI8XdBrL9LYS68XLflh48lJI+nNPEPVj1FMI7CXZIsj/jOx4PbCeiWqrBJf2QRoCT1rxSXI8cN4AsdS4w=="],
 
     "media-typer": ["media-typer@1.1.0", "", {}, "sha512-aisnrDP4GNe06UcKFnV5bfMNPBUw4jsLGaWwWfnH3v02GnBuXX2MCVn5RbrWo0j3pczUilYblq7fQ7Nw2t5XKw=="],
 
