@@ -7,7 +7,7 @@ import {
   parseJsonData,
 } from "../common";
 import { getTitleText, getInstructionsText } from "@/contracts/prompts";
-import wizardMcpPackage from "@openzeppelin/wizard-mcp/package.json";
+import wizardMcpPackage from "@openzeppelin/contracts-mcp/package.json";
 
 const CAIRO_TOOLS_NAMES = [
   "cairo-erc20",

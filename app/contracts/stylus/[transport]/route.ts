@@ -1,8 +1,8 @@
 import { createMcpHandler } from "mcp-handler";
-import { registerStylusTools } from "@openzeppelin/wizard-mcp/src/stylus/tools";
+import { registerStylusTools } from "@openzeppelin/contracts-mcp/src/stylus/tools";
 import { getTitleText } from "@/contracts/prompts";
 import { getInstructionsText } from "@/contracts/prompts";
-import wizardMcpPackage from "@openzeppelin/wizard-mcp/package.json";
+import wizardMcpPackage from "@openzeppelin/contracts-mcp/package.json";
 import { gaAnalyticsWrapper } from "@/libraries/ga-analytics-wrapper";
 
 const LANGUAGE = "Stylus";

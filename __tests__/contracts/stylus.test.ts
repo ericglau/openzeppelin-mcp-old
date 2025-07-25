@@ -7,7 +7,7 @@ import {
   parseJsonData,
 } from "../common";
 import { getTitleText, getInstructionsText } from "@/contracts/prompts";
-import wizardMcpPackage from "@openzeppelin/wizard-mcp/package.json";
+import wizardMcpPackage from "@openzeppelin/contracts-mcp/package.json";
 
 const STYLUS_TOOLS_NAMES = ["stylus-erc20", "stylus-erc721", "stylus-erc1155"];
 
