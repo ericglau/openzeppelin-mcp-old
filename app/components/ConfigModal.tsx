@@ -99,7 +99,21 @@ export function ConfigModal({ isOpen, onClose, mcp, currentTheme }) {
             </button>
           ))}
         </div>
-        <div className="modal-body">{renderConfigContent()}</div>
+        <div className="modal-body">
+          {renderConfigContent()}
+          <div className="modal-npm-link">
+            {" "}
+            Powered by the{" "}
+            <a
+              href={`https://www.npmjs.com/package/${mcp.npmMcpPackage}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {mcp.npmMcpPackage}
+            </a>{" "}
+            npm package.{" "}
+          </div>
+        </div>
       </div>
     </div>
   );
