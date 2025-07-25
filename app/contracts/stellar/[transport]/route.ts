@@ -1,5 +1,5 @@
 import { createMcpHandler } from "mcp-handler";
-import { registerStellarTools } from "@openzeppelin/wizard-mcp/src/stellar/tools";
+import { registerStellarTools } from "@openzeppelin/contracts-mcp";
 import { getTitleText } from "@/contracts/prompts";
 import { getInstructionsText } from "@/contracts/prompts";
 import wizardMcpPackage from "@openzeppelin/wizard-mcp/package.json";
