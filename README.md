@@ -1,10 +1,23 @@
 # OpenZeppelin MCP Servers Repository
 
-Model Context Protocol Servers Repository for OpenZeppelin products.
+Model Context Protocol servers repository for OpenZeppelin products.
 
 ## Usage
 
-This repository contains the code for Model Context Protocol servers repository for OpenZeppelin products. For configuration instructions visit [mcp.openzeppelin.com](https://mcp.openzeppelin.com).
+This repository contains the code for the Model Context Protocol (MCP) servers repository for OpenZeppelin products.
+
+For configuration instructions, visit [mcp.openzeppelin.com](https://mcp.openzeppelin.com).
+
+## Provided Servers
+
+The following MCP servers are provided:
+
+- Solidity Contracts
+- Cairo Contracts
+- Stellar Contracts
+- Stylus Contracts
+
+These servers are hosted versions of the [OpenZeppelin Contracts MCP](https://github.com/OpenZeppelin/contracts-wizard/blob/master/packages/mcp/README.md) package, which can also be run locally by following the instructions in the linked readme.
 
 ## Local Development
 
