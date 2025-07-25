@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>{children}</body>
-      <GoogleAnalytics gaId="G-RF1GBH803L" />
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID} />
     </html>
   );
 }

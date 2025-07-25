@@ -75,7 +75,7 @@ bun run start
 1. Build image:
 
 ```bash
-docker build -t openzeppelin-mcp .
+docker build --build-arg GA4_API_SECRET="$GA4_API_SECRET" --build-arg NEXT_PUBLIC_GA4_MEASUREMENT_ID="$NEXT_PUBLIC_GA4_MEASUREMENT_ID" -t openzeppelin-mcp .
 ```
 
 2. Run container:

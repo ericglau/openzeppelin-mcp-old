@@ -3,6 +3,7 @@ import { registerStylusTools } from "@openzeppelin/wizard-mcp/src/stylus/tools";
 import { getTitleText } from "@/contracts/prompts";
 import { getInstructionsText } from "@/contracts/prompts";
 import wizardMcpPackage from "@openzeppelin/wizard-mcp/package.json";
+import { gaAnalyticsWrapper } from "@/libraries/ga-analytics-wrapper";
 
 const LANGUAGE = "Stylus";
 
@@ -25,13 +26,15 @@ const serverConfig = {
   maxDuration: 60,
 };
 
-const handler = createMcpHandler(
+const mcpHandler = createMcpHandler(
   async (server) => {
     registerStylusTools(server);
   },
   serverOptions,
   serverConfig
 );
+
+const handler = gaAnalyticsWrapper(mcpHandler);
 
 export const GET = handler;
 export const POST = handler;
