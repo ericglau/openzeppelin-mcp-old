@@ -2,7 +2,7 @@ import { createMcpHandler } from "mcp-handler";
 import { registerStylusTools } from "@openzeppelin/contracts-mcp/src/stylus/tools";
 import { getTitleText } from "@/contracts/prompts";
 import { getInstructionsText } from "@/contracts/prompts";
-import wizardMcpPackage from "@openzeppelin/contracts-mcp/package.json";
+import contractsMcpPackage from "@openzeppelin/contracts-mcp/package.json";
 import { gaAnalyticsWrapper } from "@/libraries/ga-analytics-wrapper";
 
 const LANGUAGE = "Stylus";
@@ -10,7 +10,7 @@ const LANGUAGE = "Stylus";
 const serverOptions = {
   serverInfo: {
     name: getTitleText(LANGUAGE),
-    version: wizardMcpPackage.version,
+    version: contractsMcpPackage.version,
   },
   capabilities: {
     tools: {

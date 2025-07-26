@@ -2,7 +2,7 @@ import { createMcpHandler } from "mcp-handler";
 import { registerStellarTools } from "@openzeppelin/contracts-mcp/src/stellar/tools";
 import { getTitleText } from "@/contracts/prompts";
 import { getInstructionsText } from "@/contracts/prompts";
-import wizardMcpPackage from "@openzeppelin/contracts-mcp/package.json";
+import contractsMcpPackage from "@openzeppelin/contracts-mcp/package.json";
 import { gaAnalyticsWrapper } from "@/libraries/ga-analytics-wrapper";
 
 const LANGUAGE = "Stellar";
@@ -10,7 +10,7 @@ const LANGUAGE = "Stellar";
 const serverOptions = {
   serverInfo: {
     name: getTitleText(LANGUAGE),
-    version: wizardMcpPackage.version,
+    version: contractsMcpPackage.version,
   },
   capabilities: {
     tools: {
