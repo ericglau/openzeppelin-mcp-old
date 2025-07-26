@@ -109,7 +109,7 @@ export default function HomePage() {
       description:
         "Generate Solidity secure smart contracts based on OpenZeppelin templates",
       url: `${BASE_URL}contracts/solidity/mcp`,
-      npmMcpPackage: "@openzeppelin/wizard-mcp",
+      npmMcpPackage: "@openzeppelin/contracts-mcp",
     },
     {
       name: "Cairo Contracts",
@@ -117,7 +117,7 @@ export default function HomePage() {
       description:
         "Generate Cairo secure smart contracts based on OpenZeppelin templates",
       url: `${BASE_URL}contracts/cairo/mcp`,
-      npmMcpPackage: "@openzeppelin/wizard-mcp",
+      npmMcpPackage: "@openzeppelin/contracts-mcp",
     },
     {
       name: "Stellar Contracts",
@@ -125,7 +125,7 @@ export default function HomePage() {
       description:
         "Generate Stellar secure smart contracts based on OpenZeppelin templates",
       url: `${BASE_URL}contracts/stellar/mcp`,
-      npmMcpPackage: "@openzeppelin/wizard-mcp",
+      npmMcpPackage: "@openzeppelin/contracts-mcp",
     },
     {
       name: "Stylus Contracts",
@@ -133,7 +133,7 @@ export default function HomePage() {
       description:
         "Generate Stylus secure smart contracts based on OpenZeppelin templates",
       url: `${BASE_URL}contracts/stylus/mcp`,
-      npmMcpPackage: "@openzeppelin/wizard-mcp",
+      npmMcpPackage: "@openzeppelin/contracts-mcp",
     },
   ];
 

@@ -1,8 +1,8 @@
 import { createMcpHandler } from "mcp-handler";
-import { registerSolidityTools } from "@openzeppelin/wizard-mcp/src/solidity/tools";
+import { registerSolidityTools } from "@openzeppelin/contracts-mcp/src/solidity/tools";
 import { getTitleText } from "@/contracts/prompts";
 import { getInstructionsText } from "@/contracts/prompts";
-import wizardMcpPackage from "@openzeppelin/wizard-mcp/package.json";
+import contractsMcpPackage from "@openzeppelin/contracts-mcp/package.json";
 import { gaAnalyticsWrapper } from "@/libraries/ga-analytics-wrapper";
 
 const LANGUAGE = "Solidity";
@@ -10,7 +10,7 @@ const LANGUAGE = "Solidity";
 const serverOptions = {
   serverInfo: {
     name: getTitleText(LANGUAGE),
-    version: wizardMcpPackage.version,
+    version: contractsMcpPackage.version,
   },
   capabilities: {
     tools: {
