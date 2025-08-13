@@ -7,7 +7,7 @@ import {
   parseJsonData,
 } from "../common";
 import { getTitleText, getInstructionsText } from "@/contracts/prompts";
-import wizardMcpPackage from "@openzeppelin/wizard-mcp/package.json";
+import contractsMcpPackage from "@openzeppelin/contracts-mcp/package.json";
 
 const STELLAR_TOOLS_NAMES = [
   "stellar-fungible",
@@ -51,7 +51,7 @@ it("Server should initialize a client session and serve Stellar tools", async ()
       expect(getTitleText("Stellar")).toBe(
         responseInitializeText["result"]["serverInfo"]["name"]
       );
-      expect(wizardMcpPackage.version).toBe(
+      expect(contractsMcpPackage.version).toBe(
         responseInitializeText["result"]["serverInfo"]["version"]
       );
       expect(getInstructionsText("Stellar")).toBe(

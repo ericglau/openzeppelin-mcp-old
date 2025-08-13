@@ -10,5 +10,5 @@ updates:
     schedule:
       interval: "daily"
     allow:
-      - dependency-name: "@openzeppelin/wizard-mcp"
+      - dependency-name: "@openzeppelin/contracts-mcp"
       - dependency-name: "mcp-handler"
